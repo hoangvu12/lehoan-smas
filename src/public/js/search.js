@@ -3,8 +3,8 @@ const studentName_input = document.querySelector(".student-name");
 const className_select = document.querySelector("#class-select");
 const semeter_select = document.querySelector("#semeter-select");
 
-// const API = `${location.origin}/api/v1`;
-const API = "http://localhost:3000/api/v1";
+const API = `${location.origin}/api/v1`;
+// const API = "http://localhost:3000/api/v1";
 
 submitBtn.addEventListener("click", async function () {
   const studentName = studentName_input.value;

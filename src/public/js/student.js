@@ -1,5 +1,5 @@
-// const API = `${location.origin}/api/v1`;
-const API = "http://localhost:3000/api/v1";
+const API = `${location.origin}/api/v1`;
+// const API = "http://localhost:3000/api/v1";
 
 const semestersContainer = document.querySelector(".nav-pills");
 
@@ -22,8 +22,6 @@ async function handleShowPage(semester) {
 
   const semesterInfo = await getSemesterInfo(classID, studentID, semester);
 
-  console.log(semesterInfo);
-
   showOverAllStats(semesterInfo.evaluation);
   showLearningStats(semesterInfo.subjects);
 
@@ -41,8 +39,6 @@ async function showStudentInfo() {
 }
 
 function showOverAllStats(evaluation) {
-  console.log(evaluation);
-
   const container = document.querySelector(".student-overall");
 
   container.innerText = "";
