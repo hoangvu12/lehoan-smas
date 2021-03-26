@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/bootstrap-width.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/hover.css" />
+    <title>SMAS - Lê Hoàn</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-heading">Tra điểm học sinh</div>
+        </div>
+        <div class="col-12 student-input">
+          <input
+            type="text"
+            placeholder="Tên học sinh"
+            class="student-name form-control"
+          />
+          <select name="class-select" id="class-select" class="form-select">
+            <option selected disabled hidden>Lớp</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="B3">B3</option>
+            <option value="B4">B4</option>
+            <option value="B5">B5</option>
+            <option value="B6">B6</option>
+            <option value="B7">B7</option>
+            <option value="B8">B8</option>
+            <option value="B9">B9</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+            <option value="A5">A5</option>
+            <option value="A6">A6</option>
+            <option value="A7">A7</option>
+            <option value="A8">A8</option>
+            <option value="A9">A9</option>
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+            <option value="C3">C3</option>
+            <option value="C4">C4</option>
+            <option value="C5">C5</option>
+            <option value="C6">C6</option>
+            <option value="C7">C7</option>
+            <option value="C8">C8</option>
+            <option value="C9">C9</option>
+          </select>
+        </div>
+        <div class="col-12 text-center mt-2">
+          <button class="btn btn-outline-primary submit-btn">
+            Tìm học sinh
+          </button>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="container">
+            <div
+              class="row students-container w-100 w-sm-75 w-md-50 w-lg-50 w-xl-50 w-xxl-50"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+.text-heading {
+  margin: 20px;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 2em;
+}
+
+.student-input {
+  text-align: center;
+}
+
+.student-input .student-name {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 8px 12px;
+  border-radius: 5px;
+  width: 25vw;
+  background-color: var(--form-color);
+  font-size: 24px;
+}
+
+.student-input .student-name::placeholder {
+  color: var(--form-placeholder-color);
+}
+
+#class-select {
+  display: inline-block;
+  width: 25%;
+  margin: 0 auto;
+  background-color: var(--form-color);
+  color: var(--form-placeholder-color);
+}
+
+.submit-btn {
+  min-width: 2em;
+  border-color: var(--border-color) !important;
+  color: var(--border-color);
+  transition: 400ms;
+}
+
+.submit-btn:hover {
+  background-color: var(--border-color);
+  outline: 0;
+}
+
+.students-container {
+  margin: 0 auto;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  background-color: #17182f;
+  border-radius: 20px;
+}
+
+.student-item {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  padding: 12px;
+}
+
+.student-item:hover {
+  cursor: pointer;
+}
+
+.student-item .student-info > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.student-item .student-img {
+  padding-right: 12px;
+}
+
+.student-item .student-img img {
+  width: 72;
+  height: 72;
+  border-radius: 50%;
+}
+
+.student-item .student-info {
+  color: #fff;
+  height: 100%;
+  width: 81%;
+}

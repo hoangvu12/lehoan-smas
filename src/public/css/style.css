@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --body-color: #4d4c5a;
+  --main-color: #141529;
+  --second-color: #79788c;
+  --hover-color: #323048;
+  --text-color: #f8fbff;
+
+  --border-color: #ff6500;
+  --form-color: #1b1b1b;
+  --form-placeholder-color: #6c757d;
+
+  --font-family: "Roboto", Arial, sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--font-family);
+}
+
+input,
+select {
+  border-color: transparent !important;
+  color: var(--text-color) !important;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.form-control,
+.form-select {
+  transition: 400ms;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--border-color) !important;
+  box-shadow: none !important;
+}
+
+.nav-item .nav-link {
+  color: #fff !important;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.nav-item .nav-link.active {
+  background-color: var(--border-color) !important;
+}
+
+.back a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 12px;
+  cursor: pointer;
+  transition: 400ms;
+  width: max-content;
+  height: max-content;
+  text-decoration: none;
+  color: #fff;
+}
+
+.back:hover a {
+  color: var(--border-color);
+}

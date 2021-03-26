@@ -1,0 +1,91 @@
+body {
+  color: #fff;
+}
+
+.container {
+  width: 75vw;
+  margin: 24px auto;
+}
+
+.loading-text {
+  display: none;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+}
+
+.student-personal-info {
+  height: 100%;
+  margin-left: 12px;
+}
+
+.student-personal-info > .student-name {
+  font-size: 24px;
+}
+
+.student-img img {
+  width: 72;
+  height: 72;
+  border-radius: 50%;
+}
+
+.student-overall {
+  float: right;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.subjects-container {
+  margin-top: 24px;
+}
+
+.subject-item {
+  background-color: #17182f;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.subject-item > div {
+  padding: 12px;
+}
+
+.subject-item .subject-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subject-marks > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subject-mark {
+  margin-bottom: 10px;
+}
+
+.marks {
+  color: var(--border-color);
+}
+
+.container.loading > .student-info-container,
+.container.loading > .subjects-container {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.container.loading .loading-text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
