@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+
 const cache = require("express-redis-cache")({
-  host: "141.136.47.42",
+  host: process.env.REDIS_IP,
   port: 6379,
-  expire: 3600, // 1 Hour
+  expire: 86400, // A day
 });
 
 const controller = require("../controllers/api.controller");
