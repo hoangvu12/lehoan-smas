@@ -1,0 +1,26 @@
+canvas.bar-chart {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.chart {
+  background-color: #20224a;
+  padding: 12px;
+  margin: 12px auto;
+}
+
+.subject-analyze .description {
+  margin: 12px auto;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.subject-analyze .description .icon {
+  margin-right: 20px;
+}
+
+.subject-analyze .description span {
+  font-weight: bold;
+  font-style: italic;
+}

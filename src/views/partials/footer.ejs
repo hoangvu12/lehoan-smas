@@ -4,9 +4,19 @@
   <div class="container-fluid">
     <ul class="navbar-nav text-center mx-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/nguyenvuzxc1/"
-          ><i class="fab fa-facebook"></i> Facebook</a
+        <% if (utils.isMobile(ua)) { %>
+        <a class="nav-link" target="_blank" href="fb://profile/100029483922771">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <% } else { %>
+        <a
+          class="nav-link"
+          target="_blank"
+          href="https://www.facebook.com/nguyenvuzxc1/"
         >
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <% } %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="mailto: nguyenvu@hoangvumail.com">
@@ -14,8 +24,8 @@
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link"
-          >Copyright <i class="far fa-copyright"></i> 2021 hoangvu12.</a
+        <a class="nav-link" href="https://github.com/hoangvu12/lehoan-smas">
+          <i class="fab fa-github"></i> Github</a
         >
       </li>
     </ul>

@@ -38,4 +38,10 @@ router.get(
   controller.getStudy
 );
 
+router.get(
+  "/class/:classID/student/:studentID/subject-analyze",
+  cache.route(),
+  controller.getSubjectAnalyze
+);
+
 module.exports = router;

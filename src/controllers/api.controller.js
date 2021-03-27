@@ -100,6 +100,20 @@ class APIController {
 
     res.status(200).json(study);
   }
+
+  static async getSubjectAnalyze(req, res) {
+    const { studentID, classID } = req.params;
+    const { subjectID, semester = 2 } = req.query;
+
+    const analyze = await API.getSubjectAnalyze(
+      subjectID,
+      studentID,
+      classID,
+      semester
+    );
+
+    res.status(200).json(analyze);
+  }
 }
 
 module.exports = APIController;

@@ -5,3 +5,7 @@ HTMLElement.prototype.append = function (html) {
 function findObjectInArray(array, property, value) {
   return array.find((object) => object[property] === value);
 }
+
+function isEmptyArray(array) {
+  return JSON.stringify(array) === "[]";
+}

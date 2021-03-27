@@ -71,6 +71,10 @@
   font-size: 10em;
 }
 
+.fa-github:before {
+  content: "\f09b";
+}
+
 .fa-long-arrow-alt-left:before {
   content: "\f30a";
 }
@@ -85,6 +89,18 @@
 
 .fa-copyright:before {
   content: "\f1f9";
+}
+
+.fa-info-circle:before {
+  content: "\f05a";
+}
+
+.fa-star:before {
+  content: "\f005";
+}
+
+.fa-times:before {
+  content: "\f00d";
 }
 
 @font-face {

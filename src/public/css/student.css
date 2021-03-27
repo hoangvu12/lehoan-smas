@@ -2,6 +2,10 @@ body {
   color: #fff;
 }
 
+body.blur {
+  overflow: hidden;
+}
+
 .container {
   width: 75vw;
   margin: 24px auto;
@@ -46,10 +50,22 @@ body {
   width: 100%;
   border-radius: 15px;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .subject-item:last-child {
   margin-bottom: 20px;
+}
+
+.subject-item:hover .subject-name::after {
+  content: "";
+  float: right;
+  border: solid var(--border-color);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 12px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
 .subject-item > div {
@@ -83,7 +99,8 @@ body {
   filter: blur(5px);
 }
 
-.container.loading .loading-text {
+.container.loading ~ .loading-text,
+.subject-analyze.loading ~ .loading-text {
   display: block;
   position: absolute;
   left: 50%;
@@ -91,5 +108,58 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 3;
+}
+
+.subject-analyze {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  overflow-y: scroll;
+
+  background-color: #17182f;
+
+  width: 85%;
+  height: 85%;
+
+  margin: auto;
+
+  display: none;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.subject-analyze::-webkit-scrollbar {
+  display: none;
+}
+
+.subject-analyze.show {
+  display: block;
+}
+
+.subject-analyze .subject-name {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.subject-analyze .subject-icon {
+  color: aquamarine;
+}
+
+.subject-analyze .exit-btn {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 95%;
+  width: max-content;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.subject-analyze .exit-btn:hover {
+  color: var(--border-color);
 }
