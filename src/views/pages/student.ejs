@@ -3,20 +3,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Search Engine -->
-    <meta name="description" content="Thông tin điểm của học sinh <%= student.name %>">
-    <meta name="image" content="https://cdn.glitch.com/1ba8ba5d-255b-4e50-ba1c-955a63c65d11%2Fav509pM_460s.jpg?v=1616770932893">
+    <meta
+      name="description"
+      content="Thông tin điểm của học sinh <%= student.name %>"
+    />
+    <meta
+      name="image"
+      content="https://cdn.glitch.com/1ba8ba5d-255b-4e50-ba1c-955a63c65d11%2Fav509pM_460s.jpg?v=1616770932893"
+    />
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="Điểm của <%= student.name %>">
-    <meta itemprop="description" content="Thông tin điểm của học sinh <%= student.name %>">
-    <meta itemprop="image" content="https://cdn.glitch.com/1ba8ba5d-255b-4e50-ba1c-955a63c65d11%2Fav509pM_460s.jpg?v=1616770932893">
+    <meta itemprop="name" content="Điểm của <%= student.name %>" />
+    <meta
+      itemprop="description"
+      content="Thông tin điểm của học sinh <%= student.name %>"
+    />
+    <meta
+      itemprop="image"
+      content="https://cdn.glitch.com/1ba8ba5d-255b-4e50-ba1c-955a63c65d11%2Fav509pM_460s.jpg?v=1616770932893"
+    />
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="Điểm của <%= student.name %>">
-    <meta name="og:description" content="Thông tin điểm của học sinh <%= student.name %>">
-    <meta name="og:type" content="website">
-    
-    
+    <meta name="og:title" content="Điểm của <%= student.name %>" />
+    <meta
+      name="og:description"
+      content="Thông tin điểm của học sinh <%= student.name %>"
+    />
+    <meta name="og:type" content="website" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,6 +44,8 @@
     <title>SMAS - Lê Hoàn</title>
   </head>
   <body>
+    <%- include("../partials/header.ejs") %>
+
     <div class="back">
       <a href="/"><i class="fas fa-long-arrow-alt-left"></i> Quay về.</a>
     </div>
@@ -63,7 +79,9 @@
 
             <div class="student-personal-info">
               <div class="student-name"><%= student.name %></div>
-              <div class="student-details"><%= student.gender %> | <%= student.birthday %></div>
+              <div class="student-details">
+                <%= student.gender %> | <%= student.birthday %>
+              </div>
             </div>
           </div>
         </div>
@@ -73,6 +91,8 @@
       </div>
       <div class="row subjects-container"></div>
     </div>
+
+    <%- include("../partials/footer.ejs") %>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/utils.js"></script>

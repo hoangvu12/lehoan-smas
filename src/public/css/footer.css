@@ -1,0 +1,11 @@
+.navbar {
+  max-height: 52px;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+}
+
+.nav-item {
+  margin-right: 12px;
+}

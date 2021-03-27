@@ -14,7 +14,7 @@
   margin: 0 auto;
   padding: 8px 12px;
   border-radius: 5px;
-  width: 25vw;
+  width: 50%;
   background-color: var(--form-color);
   font-size: 24px;
 }

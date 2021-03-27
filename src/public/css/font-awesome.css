@@ -75,6 +75,18 @@
   content: "\f30a";
 }
 
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-copyright:before {
+  content: "\f1f9";
+}
+
 @font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;

@@ -1,12 +1,22 @@
 const axios = require("axios");
 const path = require("path");
 
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+const Cache = require("../Cache");
+const Contacts = require("../models/Contacts");
 
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 class API {
   static async getContact(classID) {
+    const savedContacts = Cache.savedContacts;
+
+    if (classID in savedContacts) {
+      return savedContacts[classID];
+    }
+
     const URL = `http://smsedu.smas.vn/Sparentapi/api/contacts/pupils/39772000/academicyears/1871034/schools/97078/class/${classID}`;
-    const data = await getResponse(URL);
+    const { data } = await getResponse(URL);
+
+    Contacts.saveContact(classID, data);
 
     return data;
   }
@@ -14,7 +24,7 @@ class API {
   static async getStudy(studentID, classID, semester = 2) {
     const URL = `http://smsedu.smas.vn/Sparentapi/api/study/tt58/pupils/${studentID}/academicyears/1871034/class/${classID}/semesters/${semester}`;
 
-    const data = await getResponse(URL);
+    const { data } = await getResponse(URL);
 
     return data;
   }

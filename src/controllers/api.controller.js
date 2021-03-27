@@ -26,7 +26,7 @@ class APIController {
   static async getStudentInfo(req, res, next) {
     const { classID, studentID } = req.params;
 
-    const { data: contact } = await API.getContact(classID);
+    const contact = await API.getContact(classID);
 
     const student = contact.find(
       (student) => student.pupil_id === Number(studentID)
@@ -47,7 +47,7 @@ class APIController {
 
     const classID = CLASSES_ID[className.toLowerCase()];
 
-    const { data: contact } = await API.getContact(classID);
+    const contact = await API.getContact(classID);
 
     const student = contact
       .filter((student) =>
@@ -86,7 +86,7 @@ class APIController {
       return res.sendStatus(400);
     }
 
-    const { data: contact } = await API.getContact(classId);
+    const contact = await API.getContact(classId);
 
     res.status(200).json(contact);
   }
@@ -96,7 +96,7 @@ class APIController {
 
     const { semester = 2 } = req.query;
 
-    const { data: study } = await API.getStudy(studentID, classID, semester);
+    const study = await API.getStudy(studentID, classID, semester);
 
     res.status(200).json(study);
   }

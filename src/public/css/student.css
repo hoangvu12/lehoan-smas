@@ -48,6 +48,10 @@ body {
   margin-bottom: 12px;
 }
 
+.subject-item:last-child {
+  margin-bottom: 20px;
+}
+
 .subject-item > div {
   padding: 12px;
 }
