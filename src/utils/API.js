@@ -32,8 +32,6 @@ class API {
   static async getSubjectAnalyze(subjectID, studentID, classID, semester = 2) {
     const URL = `http://smsedu.smas.vn/Sparentapi/api/study/tt58/mark-analysis/academicyears/1871034/class/${classID}/subjects/${subjectID}/semesters/${semester}/pupils/${studentID}`;
 
-    console.log(URL);
-
     const { data } = await getResponse(URL);
 
     return data;

@@ -1,4 +1,5 @@
-canvas.bar-chart {
+canvas.bar-chart,
+canvas.line-chart {
   margin: 0 auto;
   width: 75%;
 }

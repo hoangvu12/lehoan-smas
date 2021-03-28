@@ -150,14 +150,17 @@ body.blur {
   color: aquamarine;
 }
 
-.subject-analyze .exit-btn {
+.subject-analyze .container-fluid {
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 95%;
+}
+
+.subject-analyze .exit-btn {
   width: max-content;
   cursor: pointer;
   transition: 400ms;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .subject-analyze .exit-btn:hover {
