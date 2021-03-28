@@ -62,9 +62,7 @@ function showChart(analyze) {
   const options = {
     1: {
       chartType: "line",
-      labels: analyze.details.map(
-        (detail) => `${detail.key} | ${detail.evaluation}`
-      ),
+      labels: analyze.details.map((detail) => [detail.key, detail.evaluation]),
       data: analyze.details.map((detail) => detail.value),
       title: "ĐIỂM QUA CÁC THỜI Kì",
       name: "marks",
