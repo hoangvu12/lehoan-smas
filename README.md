@@ -1,4 +1,6 @@
-# Lê Hoàn SMAS (lehoan-smas)
+# Deprecated - Không còn hoạt động.
+
+# Lê Hoàn SMAS (lehoan-smas) 
 
 ![image](https://user-images.githubusercontent.com/68330291/112575562-2030ca00-8e23-11eb-9781-7b6c4cf4a16d.png)
 ![image](https://user-images.githubusercontent.com/68330291/112575910-d1376480-8e23-11eb-8616-54139981533c.png)
